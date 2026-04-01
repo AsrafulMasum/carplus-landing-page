@@ -5,6 +5,7 @@ import { Badge } from '../ui/badge'
 import car from "@/app/assets/car-for-card.webp"
 import car2 from "@/app/assets/car-for-card-2.webp"
 import CustomButton from './CustomButton'
+import Link from 'next/link'
 
 const CustomCard = ({image}: {image: string}) => {
   return (
@@ -27,7 +28,9 @@ const CustomCard = ({image}: {image: string}) => {
       </CardHeader>
       <CardFooter className='flex justify-between items-center w-full'>
         <h6 className='text-2xl font-medium text-primary font-oswald'>$ 40,000</h6>
-        <CustomButton text='View Details' color='primary' />
+        <Link href="/car-details">
+          <CustomButton text='View Details' color='primary' />
+        </Link>
       </CardFooter>
     </Card>
   )

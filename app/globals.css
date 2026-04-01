@@ -253,4 +253,8 @@
   .showreel-star {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   }
+
+  .car-details {
+    @apply min-h-screen w-full flex justify-between overflow-hidden bg-primary-foreground;
+  }
 }
