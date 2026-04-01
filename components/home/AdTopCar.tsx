@@ -5,7 +5,7 @@ import CustomButton from '../shared/CustomButton'
 
 const AdTopCar = () => {
   return (
-    <section className="flex items-center justify-center py-40" style={{
+    <section className="flex items-center justify-center py-10 xl:py-40" style={{
       "backgroundImage": "linear-gradient(130deg, #c3d1e2, #ecedf0)"
     }}>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
@@ -22,7 +22,7 @@ const AdTopCar = () => {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-center order-1 lg:order-2">
+        <div className="flex flex-col justify-center order-1 lg:order-2 px-4">
           {/* Label */}
           <div className="ad-sub-heading">
             Inquiry Made Easy

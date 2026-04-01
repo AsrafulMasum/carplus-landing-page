@@ -1,11 +1,4 @@
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import {
   Tabs,
   TabsContent,
   TabsList,
@@ -23,15 +16,17 @@ const InformationTabs = () => {
     <section className="information-tabs">
       <ContainerLayout>
         <Tabs defaultValue="description">
-          <TabsList className="border-b w-full flex justify-start gap-20 rounded-none">
+          <TabsList className="border-b w-full flex justify-start gap-4 xl:gap-20 rounded-none">
             <TabsTrigger value="description">Description</TabsTrigger>
             <TabsTrigger value="additional-information">Additional information</TabsTrigger>
           </TabsList>
 
           <TabsContent className="tab-content" value="description" >
-            <div className="flex-1">
+            <div className="xl:flex-1">
+              <Image className="xl:hidden w-full h-80 object-cover object-bottom rounded-2xl mt-12" src={carBack} alt="car" width={500} height={500} />
               <h4 className="description-heading">Car information</h4>
               <p className="description-text">Lorem ipsum dolor sit amet consectetur. Non massa amet neque et egestas orci morbi. Non id mauris amet pretium posuere amet faucibus duis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet ligula in felis viverra egestas. Donec egestas sit amet augue convallis fermentum. MauriGs at risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              <Image className="xl:hidden w-full h-80 object-cover object-bottom rounded-2xl mt-12" src={communication} alt="car" width={500} height={500} />
               <h4 className="description-heading">CAR DETAILS</h4>
               <div className="space-y-2">
                 <p className="description-text"><ShieldCheck className="text-primary" /> Lorem ipsum dolor sit amet consectetur. </p>
@@ -40,7 +35,7 @@ const InformationTabs = () => {
               </div>
             </div>
 
-            <div className="flex-1 relative">
+            <div className="hidden xl:block xl:flex-1 relative">
               <Image className="absolute top-16 left-0 w-72 rounded-2xl" src={carBack} alt="car" width={500} height={500} />
               <Image className="absolute top-60 right-16 w-72 rounded-2xl" src={communication} alt="car" width={500} height={500} />
             </div>
@@ -48,8 +43,8 @@ const InformationTabs = () => {
 
 
           <TabsContent className="tab-content" value="additional-information">
-            <div className="flex gap-28">
-              <ol className="list-disc space-y-8 pt-10 px-8 flex-1">
+            <div className="flex flex-col-reverse xl:flex-row gap-4 xl:gap-28">
+              <ol className="list-disc space-y-4 xl:space-y-8 pt-10 px-4 xl:px-8 flex-1">
                 <li className="list-text"><span className="text-black font-semibold">Make and model : </span> Manufacturer and specific car name</li>
                 <li className="list-text"><span className="text-black font-semibold">Engine type : </span> Gasoline, diesel, hybrid, or electric.</li>
                 <li className="list-text"><span className="text-black font-semibold">Engine capacity : </span> Ranges from 1.0L to 8.0L or more</li>

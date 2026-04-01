@@ -7,8 +7,10 @@ import React from "react";
 export default function ActiveLink({
   href,
   children,
+  className,
 }: {
   href: string;
+  className?: string;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
@@ -21,7 +23,7 @@ export default function ActiveLink({
         isActive
           ? "border-b-2 border-[#f55118]"
           : "border-b-2 border-transparent"
-      } transition-all duration-300`}
+      } transition-all duration-300 ${className}`}
     >
       {children}
     </Link>

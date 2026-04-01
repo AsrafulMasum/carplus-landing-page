@@ -10,10 +10,10 @@ const CarDetails = () => {
       <ContainerLayout>
         <div>
           <div className="car-details-container">
-            <div className='w-1/2'>
+            <div className='xl:w-1/2'>
               <ProductCarousel images={productImages} />
             </div>
-            <div className='w-1/2'>
+            <div className='xl:w-1/2'>
               <ProductDetails />
             </div>
           </div>

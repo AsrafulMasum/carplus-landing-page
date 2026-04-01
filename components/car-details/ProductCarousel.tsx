@@ -19,9 +19,9 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
   const currentImage = images.find((img) => img.id === selectedImage);
 
   return (
-    <div className="flex gap-6 p-8">
+    <div className="flex flex-col-reverse xl:flex-row gap-6 p-8">
       {/* Thumbnail Gallery */}
-      <div className="flex flex-col gap-4">
+      <div className="flex xl:flex-col gap-4">
         {images?.map((image) => (
           <button
             key={image.id}
@@ -43,14 +43,14 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
       </div>
 
       {/* Main Image Display */}
-      <div className="flex-1 flex items-center justify-center rounded-lg min-h-96">
+      <div className="flex-1 flex items-center justify-center rounded-lg xl:min-h-96">
         {currentImage && (
           <Image
             src={currentImage.src}
             alt={currentImage.alt}
             width={700}
             height={700}
-            className="object-cover rounded-lg h-[650px] w-full"
+            className="object-cover rounded-lg h-96 xl:h-[650px] w-full"
           />
         )}
       </div>

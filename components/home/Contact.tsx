@@ -11,9 +11,9 @@ const Contact = () => {
     <div className='contact'>
       <ContainerLayout>
         <div className='flex gap-20'>
-          <div className='flex flex-col gap-20'>
+          <div className='flex flex-col gap-8 xl:gap-20'>
             <h2 className='contact-heading'>let’s <span className='text-primary'>talk</span></h2>
-            <div className='space-y-20'>
+            <div className='space-y-10 xl:space-y-20'>
               <Input className='w-full' placeholder="Enter Name" />
               <Input className='w-full' placeholder="Enter Email" />
               <Textarea placeholder="Type your message here." />

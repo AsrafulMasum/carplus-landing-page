@@ -10,7 +10,7 @@ const ProductDetails = () => {
       </div>
 
       {/* Product Title */}
-      <h1 className="text-4xl font-bold text-gray-900">
+      <h1 className="text-3xl xl:text-4xl font-bold text-gray-900">
         ROLLS-ROYCES CULLINAN 2023
       </h1>
 

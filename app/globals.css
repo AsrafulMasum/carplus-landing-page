@@ -103,7 +103,7 @@
 
 @layer utilities {
   .navbar {
-    @apply px-4 2xl:px-0 2xl:mx-auto w-full flex justify-between items-center h-24 sticky top-0 left-0 z-50 text-white border-b border-gray-600;
+    @apply px-4 2xl:px-0 2xl:mx-auto w-full hidden xl:flex justify-between items-center h-24 sticky top-0 left-0 z-50 text-white border-b border-gray-600;
   }
 
   .logo {
@@ -119,19 +119,19 @@
   }
 
   .banner {
-    @apply max-h-[calc(100vh-96px)] max-w-screen flex items-start justify-start relative;
+    @apply max-h-[calc(100vh-96px)] max-w-screen flex items-start justify-start relative pt-20 xl:pt-0;
   }
 
   .left-banner {
-    @apply pt-16 flex flex-col items-start gap-2;
+    @apply pt-16 flex flex-col items-start gap-8 xl:gap-2;
   }
 
   .heading {
-    @apply xl:text-[180px] font-boldonse! tracking-wide leading-56 font-medium text-primary!;
+    @apply text-6xl xl:text-[180px] font-boldonse! tracking-wide xl:leading-56 font-medium text-primary!;
   }
 
   .sub-heading {
-    @apply xl:text-7xl font-roboto tracking-wide font-medium text-white uppercase w-1/2 pb-8; 
+    @apply text-5xl xl:text-7xl font-roboto tracking-wide font-medium text-white uppercase xl:w-1/2 pb-8; 
   }
 
   .text {
@@ -139,7 +139,7 @@
   }
 
   .right-banner {
-    @apply bg-transparent absolute -bottom-44 right-0 w-[500px] h-[700px] overflow-hidden rounded-t-full flex justify-center items-center;
+    @apply bg-transparent absolute -bottom-44 right-0 w-[500px] h-[700px] overflow-hidden rounded-t-full hidden xl:flex justify-center items-center;
   }
 
   .marquee-slider{
@@ -155,7 +155,7 @@
   }
 
   .about-section {
-    @apply min-h-screen relative w-full bg-bg-about flex justify-between overflow-hidden py-40;
+    @apply min-h-screen relative w-full bg-bg-about flex justify-between overflow-hidden py-10 xl:py-40;
   }
 
   .stroke-img {
@@ -163,11 +163,11 @@
   }
 
   .about-container {
-    @apply w-full h-full flex gap-20 px-20;
+    @apply w-full h-full flex flex-col xl:flex-row gap-4 xl:gap-20 px-4 xl:px-20;
   }
 
   .about-content-left {
-    @apply flex flex-col items-start gap-2 w-1/2;
+    @apply flex flex-col items-start gap-2 xl:w-1/2;
   }
 
   .about-sub-heading {
@@ -175,7 +175,7 @@
   }
 
   .about-heading {
-    @apply text-4xl font-boldonse! tracking-widest leading-14 text-black uppercase pb-20 max-w-[700px];
+    @apply text-2xl xl:text-4xl font-boldonse! tracking-widest xl:leading-14 text-black uppercase pb-4 xl:pb-20 max-w-[700px];
   }
 
   .about-img-left-container {
@@ -183,11 +183,11 @@
   }
 
   .about-img-left {
-    @apply rounded-3xl h-full w-[90%] object-cover absolute z-20!;
+    @apply rounded-3xl w-full xl:h-full xl:w-[90%] object-cover xl:absolute z-20!;
   }
 
   .about-content-right {
-    @apply flex flex-col items-start gap-2 w-1/2;
+    @apply flex flex-col items-start gap-2 xl:w-1/2;
   }
 
   .about-img-right-container {
@@ -195,7 +195,7 @@
   }
 
   .inside-img {
-    @apply rounded-3xl h-[90%] w-[85%] object-cover;
+    @apply hidden xl:block rounded-3xl h-[90%] w-[85%] object-cover;
   }
 
   .about-text {
@@ -215,7 +215,7 @@
   }
 
   .featured {
-    @apply min-h-screen w-full flex justify-between overflow-hidden py-32 bg-white;
+    @apply min-h-screen w-full flex justify-between overflow-hidden py-10 xl:py-32 bg-white;
   }
 
   .featured-sub-heading {
@@ -223,7 +223,7 @@
   }
 
   .featured-heading {
-    @apply text-4xl font-boldonse tracking-widest leading-14 text-black uppercase pb-20 max-w-[750px] text-center;
+    @apply text-2xl xl:text-4xl font-boldonse tracking-widest xl:leading-14 text-black uppercase pb-20 max-w-[750px] text-center;
   }
 
   .ad-sub-heading {
@@ -231,19 +231,19 @@
   }
 
   .ad-heading {
-    @apply text-4xl font-boldonse tracking-widest leading-14 text-black uppercase pb-8 max-w-[700px];
+    @apply text-2xl xl:text-4xl font-boldonse tracking-widest xl:leading-14 text-black uppercase pb-8 max-w-[700px];
   }
 
   .contact {
-    @apply min-h-screen w-full flex justify-between overflow-hidden pt-40 bg-black;
+    @apply xl:min-h-screen w-full flex justify-between overflow-hidden py-20 xl:pt-40 bg-black;
   }
 
   .contact-heading {
-    @apply text-9xl font-dmSans font-bold tracking-tight leading-14 text-white uppercase pb-8 max-w-[700px];
+    @apply text-6xl xl:text-9xl font-dmSans font-bold tracking-tight leading-14 text-white uppercase pb-8;
   }
 
   .showreel-container {
-    @apply relative h-[58vh] w-1/2;
+    @apply hidden xl:block relative h-[58vh] w-1/2;
   }
 
   .showreel-text {
@@ -255,11 +255,11 @@
   }
 
   .car-details {
-    @apply min-h-[calc(100vh-96px)] w-full flex justify-between overflow-hidden bg-bg-about;
+    @apply min-h-[calc(100vh-96px)] w-full flex flex-col xl:flex-row justify-between xl:overflow-hidden bg-bg-about;
   }
 
   .car-details-container {
-    @apply w-full h-full flex gap-20 mt-20;
+    @apply w-full h-full flex flex-col xl:flex-row gap-4 xl:gap-20 mt-20;
   }
 
   .description-heading {
@@ -267,11 +267,11 @@
   }
 
   .information-tabs {
-    @apply min-h-screen w-full py-20 px-12 flex justify-between overflow-hidden bg-bg-about;
+    @apply min-h-screen w-full py-20 xl:px-12 flex flex-col xl:flex-row justify-between xl:overflow-hidden bg-bg-about;
   }
 
   .tab-content {
-    @apply w-full h-full flex gap-28;
+    @apply w-full h-full flex flex-col xl:flex-row gap-4 xl:gap-28;
   }
 
   .description-heading {

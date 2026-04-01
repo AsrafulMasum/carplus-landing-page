@@ -31,9 +31,9 @@ const Footer = () => {
       <div className="border-t border-gray-600"></div>
 
       {/* Main content */}
-      <div className="grid grid-cols-3 gap-8 px-12 border-b border-gray-600">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-2 xl:gap-8 px-12 xl:border-b border-gray-600">
         {/* Brand section */}
-        <div className="space-y-8 border-r border-gray-600 p-8">
+        <div className="space-y-8 xl:border-r border-gray-600 py-8 xl:p-8">
           <div className="flex items-center gap-2">
             <Image src="/logo.svg" alt="Logo" width={200} height={200} />
           </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="space-y-6 border-r border-gray-600 p-8">
+        <div className="space-y-6 xl:border-r border-gray-600 py-8 xl:p-8">
           <h3 className="text-xl font-bold tracking-wide font-dmSans">QUICK LINKS</h3>
           <nav className="space-y-4">
             {quickLinks.map((link) => (
@@ -62,7 +62,7 @@ const Footer = () => {
           </nav>
         </div>
 
-        <div className='flex justify-between p-8'>
+        <div className='flex flex-col xl:flex-row justify-between py-8 xl:p-8'>
           {/* Support */}
         <div className="space-y-6">
           <h3 className="text-xl font-bold tracking-wide font-dmSans">SUPPORT</h3>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         {/* Follow Us */}
-        <div className="space-y-6">
+        <div className="space-y-6 pt-16 xl:pt-0">
           <h3 className="text-xl font-bold tracking-wide font-dmSans">FOLLOW US</h3>
           <div className="flex gap-4">
             {socialLinks.map((social) => {
@@ -102,7 +102,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom section */}
-      <div className="px-12 py-6 flex justify-between items-center text-gray-400">
+      <div className="px-12 py-6 flex flex-col xl:flex-row justify-between items-center gap-4 text-gray-400 border-t xl:border-t-0 border-gray-600 text-center xl:text-left">
         <p>
           Designed by <span className="text-white font-semibold">HM MASUM</span>, powered by{' '}
           <span className="text-white font-semibold">NEXT.JS</span>
