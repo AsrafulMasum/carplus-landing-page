@@ -255,10 +255,34 @@
   }
 
   .car-details {
-    @apply min-h-screen w-full flex justify-between overflow-hidden bg-bg-about;
+    @apply min-h-[calc(100vh-96px)] w-full flex justify-between overflow-hidden bg-bg-about;
   }
 
   .car-details-container {
-    @apply w-full h-full flex gap-20;
+    @apply w-full h-full flex gap-20 mt-20;
+  }
+
+  .description-heading {
+    @apply text-4xl font-boldonse tracking-widest leading-14 text-black uppercase pb-8 max-w-[700px];
+  }
+
+  .information-tabs {
+    @apply min-h-screen w-full py-20 px-12 flex justify-between overflow-hidden bg-bg-about;
+  }
+
+  .tab-content {
+    @apply w-full h-full flex gap-28;
+  }
+
+  .description-heading {
+    @apply text-2xl font-dmSans font-semibold tracking-tight text-black uppercase pt-8 pb-2;
+  }
+
+  .description-text {
+    @apply text-gray-600 flex items-center gap-2;
+  }
+
+  .list-text {
+    @apply text-gray-600 text-lg font-dmSans;
   }
 }

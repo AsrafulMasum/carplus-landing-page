@@ -1,3 +1,4 @@
+import InformationTabs from "@/components/car-details/InformationTabs"
 import ProductCarousel from "@/components/car-details/ProductCarousel"
 import ProductDetails from "@/components/car-details/ProductDetails"
 import { productImages } from "@/constants/navItems"
@@ -7,13 +8,17 @@ const CarDetails = () => {
   return (
     <section className="car-details">
       <ContainerLayout>
-        <div className="car-details-container">
-          <div className='w-1/2 mt-20'>
-            <ProductCarousel images={productImages} />
+        <div>
+          <div className="car-details-container">
+            <div className='w-1/2'>
+              <ProductCarousel images={productImages} />
+            </div>
+            <div className='w-1/2'>
+              <ProductDetails />
+            </div>
           </div>
-          <div className='w-1/2 mt-20'>
-            <ProductDetails />
-          </div>
+
+          <InformationTabs />
         </div>
       </ContainerLayout>
     </section>
