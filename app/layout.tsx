@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${poppins.variable} ${oswald.variable} ${nunito.variable} ${boldonse.variable} antialiased`}>
-        <header>
+        <header className="relative">
           <Navbar />
         </header>
         <main>

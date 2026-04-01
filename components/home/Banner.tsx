@@ -4,7 +4,7 @@ import CustomButton from '../CustomButton'
 
 const Banner = () => {
   return (
-    <div className='h-[calc(100vh-96px)] w-screen overflow-hidden' style={{
+    <div className='h-[calc(100vh-96px)] max-w-screen overflow-hidden' style={{
     backgroundImage: "url('/bg.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -22,7 +22,7 @@ const Banner = () => {
           </div>
 
           <div className='right-banner'>
-            <video src="/showcase-video.mp4" autoPlay loop muted className="w-full h-full object-cover rounded-full"></video>
+            <video src="/showcase-video.mp4" autoPlay loop muted className="w-full h-full object-cover rounded-t-full"></video>
           </div>
         </div>
       </ContainerLayout>

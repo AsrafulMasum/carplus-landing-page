@@ -6,6 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-bg-gray: var(--bg-gray);
+  --color-bg-about: var(--bg-about);
   --font-sans: var(--font-poppins);
   --font-oswald: var(--font-oswald);
   --font-roboto: var(--font-roboto);
@@ -60,7 +62,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #f55118;
-  --primary-foreground: oklch(0.985 0 0);
+  --bg-gray: #e1e3e8;
+  --bg-about: #f3f4f6;
+  --primary-foreground: #FEE6E2;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -86,44 +90,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
     @apply bg-background text-foreground;
   }
@@ -147,7 +114,7 @@
   }
 
   .banner {
-    @apply h-full w-screen flex items-start justify-start relative;
+    @apply max-h-[calc(100vh-96px)] max-w-screen flex items-start justify-start relative;
   }
 
   .left-banner {
@@ -159,14 +126,86 @@
   }
 
   .sub-heading {
-    @apply xl:text-7xl font-roboto tracking-tight font-medium text-white uppercase w-1/2 pb-4; 
+    @apply xl:text-7xl font-roboto tracking-wide font-medium text-white uppercase w-1/2 pb-8; 
   }
 
   .text {
-    @apply xl:text-2xl font-boldonse! tracking-normal pt-4 pb-8 font-medium text-white uppercase w-full text-end;
+    @apply xl:text-2xl font-boldonse! tracking-normal pt-4 pb-8 font-medium text-primary-foreground uppercase w-full text-end;
   }
 
   .right-banner {
-    @apply bg-transparent absolute -bottom-44 right-96 w-96 h-[650px] overflow-hidden rounded-full flex justify-center items-center;
+    @apply bg-transparent absolute -bottom-40 right-0 w-[500px] h-[700px] overflow-hidden rounded-full flex justify-center items-center;
+  }
+
+  .marquee-slider{
+    @apply flex items-center h-28 overflow-hidden bg-bg-about border-b border-background;
+  }
+
+  .marquee-item {
+    @apply flex items-center gap-20;
+  }
+
+  .marquee-text {
+    @apply text-3xl font-boldonse! tracking-normal font-medium text-black uppercase pr-20;
+  }
+
+  .about-section {
+    @apply min-h-screen relative w-full bg-bg-about flex justify-between overflow-hidden py-20;
+  }
+
+  .stroke-img {
+    @apply absolute -top-5 left-0;
+  }
+
+  .about-container {
+    @apply w-full h-full flex gap-20 px-20;
+  }
+
+  .about-content-left {
+    @apply flex flex-col items-start gap-2 w-1/2;
+  }
+
+  .about-sub-heading {
+    @apply text-lg font-boldonse! tracking-widest pb-4 font-medium text-black uppercase;
+  }
+
+  .about-heading {
+    @apply text-5xl tracking-normal font-semibold text-black uppercase pb-20;
+  }
+
+  .about-img-left-container {
+    @apply w-full h-full! relative;
+  }
+
+  .about-img-left {
+    @apply rounded-3xl h-full w-[90%] object-cover absolute z-20!;
+  }
+
+  .about-content-right {
+    @apply flex flex-col items-start gap-2 w-1/2;
+  }
+
+  .about-img-right-container {
+    @apply w-full h-full;
+  }
+
+  .inside-img {
+    @apply rounded-3xl h-[90%] w-[85%] object-cover;
+  }
+
+  .about-text {
+    @apply pb-4 font-medium text-gray-600;
+  }
+
+  .icon-container {
+    @apply flex flex-col gap-4 w-1/3;
+  }
+
+  .icon {
+    @apply w-16 h-16;
+  }
+
+  .icon-heading {
+    @apply text-xl tracking-tight leading-8 pb-4 font-medium text-black! uppercase;
   }
 }
