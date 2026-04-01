@@ -11,7 +11,7 @@ const CustomCard = ({image}: {image: string}) => {
   return (
     <Card className="relative mx-auto w-full pt-0 p-8">
       <CardAction className='flex justify-between items-center w-full'>
-        <CardTitle className='text-xl font-medium font-boldonse'>2023 INFINITI QX80</CardTitle>
+        <CardTitle className='text-xl font-medium font-dmSans'>2023 INFINITI QX80</CardTitle>
         <Badge variant="outline" className='uppercase tracking-widest text-sm'>SALE</Badge>
       </CardAction>
       <p className='text-gray-600 tracking-widest'>Mileage: 18031km  |  Manual</p>

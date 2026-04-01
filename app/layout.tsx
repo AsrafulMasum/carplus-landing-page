@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto , Poppins, Oswald, Nunito, Boldonse, Archivo_Black, DM_Sans } from "next/font/google";
+import { Roboto , Poppins, Oswald, Nunito, Archivo_Black, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Footer from "@/components/shared/Footer";
@@ -46,13 +46,6 @@ const nunito = Nunito({
   display: "swap",
 });
 
-const boldonse = Boldonse({
-  variable: "--font-boldonse",
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "CARPLUS",
   description: "Next.js + Tailwind CSS + GSAP landing page",
@@ -68,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${poppins.variable} ${oswald.variable} ${nunito.variable} ${boldonse.variable} ${dmSans.variable} ${archivo.variable} antialiased`}>
+      <body className={`${roboto.variable} ${poppins.variable} ${oswald.variable} ${nunito.variable} ${dmSans.variable} ${archivo.variable} antialiased`}>
         <header className="relative">
           <Navbar />
         </header>
