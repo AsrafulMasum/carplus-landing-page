@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto , Poppins, Oswald, Nunito, Boldonse } from "next/font/google";
+import { Roboto , Poppins, Oswald, Nunito, Boldonse, Archivo_Black, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
+import Footer from "@/components/shared/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -17,12 +18,26 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+})
+
 const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
   display: "swap",
 });
+
+const archivo = Archivo_Black({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+})
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -53,13 +68,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${poppins.variable} ${oswald.variable} ${nunito.variable} ${boldonse.variable} antialiased`}>
+      <body className={`${roboto.variable} ${poppins.variable} ${oswald.variable} ${nunito.variable} ${boldonse.variable} ${dmSans.variable} ${archivo.variable} antialiased`}>
         <header className="relative">
           <Navbar />
         </header>
         <main>
           {children}
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { navItems } from '@/constants/navItems'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../../../public/logo.svg'
-import CustomButton from '@/components/CustomButton'
+import CustomButton from '@/components/shared/CustomButton'
 import { ShoppingCart } from 'lucide-react'
 
 const Navbar = () => {

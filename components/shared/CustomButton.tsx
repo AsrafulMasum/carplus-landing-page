@@ -3,8 +3,6 @@
 import { Button } from "@/components/ui/button";
 import arrow1 from "@/app/assets/arrow1.svg";
 import arrow2 from "@/app/assets/arrow2.svg";
-import blackArrow1 from "@/app/assets/blackArrow1.svg";
-import blackArrow2 from "@/app/assets/blackArrow2.svg";
 import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -57,7 +55,7 @@ const CustomButton = ({ text, color }: CustomButtonProps) => {
     <Button
       ref={btnRef}
       className={cn(
-        "flex items-center gap-2 px-10",
+        "flex items-center gap-2 px-10 h-14",
         color === "transpent" ? "bg-transparent text-white border font-extralight" : "bg-primary text-white font-medium"
       )}
     >

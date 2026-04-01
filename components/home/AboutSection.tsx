@@ -5,19 +5,19 @@ import car from "@/app/assets/car.webp"
 import inside from "@/app/assets/inside-car.webp"
 import carIcon from "@/app/assets/car-icon.svg"
 import cargoIcon from "@/app/assets/cargo-icon.svg"
-import CustomButton from '../CustomButton'
+import CustomButton from '../shared/CustomButton'
 
 const AboutSection = () => {
   return (
     <div className='about-section'>
-      <Image className='stroke-img' src={stroke} alt="stroke" width={800} height={800} />
+      <Image className='stroke-img' src={stroke} alt="stroke" width={850} height={850} />
       <ContainerLayout>
         <div className='about-container'>
           <div className='about-content-left'>
             <p className='about-sub-heading'>WHO WE ARE</p>
-            <h1 className='about-heading'>About <span>carplus</span></h1>
+            <h1 className='about-heading'>About <span className='text-primary'>carplus</span></h1>
             <div className='about-img-left-container'>
-              <div className='hidden xl:block absolute top-14 -left-12 h-[620px]! w-[580px]! bg-bg-gray z-0!'></div>
+              <div className='hidden xl:block absolute top-14 -left-14 h-[600px]! w-[580px]! bg-bg-gray z-0!'></div>
               <Image className='about-img-left' src={car} alt="car" width={500} height={600} />
             </div>
           </div>

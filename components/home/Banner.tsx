@@ -1,6 +1,6 @@
 import ContainerLayout from '@/layouts/ContainerLayout'
 import React from 'react'
-import CustomButton from '../CustomButton'
+import CustomButton from '../shared/CustomButton'
 
 const Banner = () => {
   return (
@@ -18,7 +18,7 @@ const Banner = () => {
               <p className='text'>PRE-OWNED CAR</p>
             </div>
             <h4 className='sub-heading'>Upgrade Your Ride, Not Your Budget</h4>
-            <CustomButton text='Explore More' color='primary' />
+            <CustomButton text='Explore More' color='primary'  />
           </div>
 
           <div className='right-banner'>
