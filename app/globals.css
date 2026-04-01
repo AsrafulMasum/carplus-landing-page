@@ -255,6 +255,10 @@
   }
 
   .car-details {
-    @apply min-h-screen w-full flex justify-between overflow-hidden bg-primary-foreground;
+    @apply min-h-screen w-full flex justify-between overflow-hidden bg-bg-about;
+  }
+
+  .car-details-container {
+    @apply w-full h-full flex gap-20;
   }
 }
