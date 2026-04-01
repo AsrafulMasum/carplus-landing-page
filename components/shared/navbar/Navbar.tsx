@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-console.log(isMenuOpen)
+
   return (
     <div>
       <nav className="navbar"
