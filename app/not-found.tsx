@@ -1,6 +1,4 @@
 import CustomButton from '@/components/shared/CustomButton'
-import { Button } from '@/components/ui/button'
-import { Home, Search } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
