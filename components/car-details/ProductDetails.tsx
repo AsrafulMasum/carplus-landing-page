@@ -1,20 +1,7 @@
-'use client'
-
-import { useState } from 'react'
 import { Star, Truck, Package } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import CustomButton from '../shared/CustomButton'
 
 const ProductDetails = () => {
-  const [quantity, setQuantity] = useState(1)
-
-  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value)
-    if (value > 0) {
-      setQuantity(value)
-    }
-  }
-
   return (
     <div className="space-y-6 max-w-xl">
       {/* Limited Time Offer Badge */}

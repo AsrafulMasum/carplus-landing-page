@@ -1,7 +1,6 @@
 import ContainerLayout from '@/layouts/ContainerLayout'
 import React from 'react'
 import CustomCard from '../shared/CustomCard'
-import car from "@/app/assets/car-for-card.webp"
 
 const FeaturedCars = () => {
   return (
